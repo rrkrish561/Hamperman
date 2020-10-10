@@ -541,6 +541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bd2de86df073c9e47a6c250e20837162, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.05
+  speed: 0.1
   maxBound: 10.5
   minBound: -10.5
+  shot: {fileID: 7597574287521216832, guid: 091972fd31f948f4ea9b465ac988973e, type: 3}
+  shotSpawn: {fileID: 1558563474}
+  fireRate: 0.5
