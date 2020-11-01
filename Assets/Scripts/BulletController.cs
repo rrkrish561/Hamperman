@@ -17,14 +17,18 @@ public class BulletController : MonoBehaviour
         bullet.position += Vector3.up * speed;
 
         if(bullet.position.y >= 10)
+        {
+            //Test score remove once enemy is implemented
+            ++UpdateScore.gameScore;
             Destroy (gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
         if(other.tag == "Enemy") {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            // Also increase score
+            ++UpdateScore.gameScore;
         }
     }
 }
