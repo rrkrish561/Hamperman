@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3578756911149061502}
   - component: {fileID: 4942513848030594316}
   - component: {fileID: 4942513848030594317}
-  - component: {fileID: 6018935870677147581}
+  - component: {fileID: -8882216262392808621}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Bullet
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.3
---- !u!82 &6018935870677147581
+--- !u!82 &-8882216262392808621
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
