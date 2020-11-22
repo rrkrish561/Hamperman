@@ -7,18 +7,21 @@ public class EnemyController : MonoBehaviour
     private Transform enemy;
 
     public float speed;
+    private float destructLevel;
 
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GetComponent<Transform>();   
+        enemy = GetComponent<Transform>();  
+        destructLevel = GameObject.FindWithTag("Player").transform.position.y; 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         enemy.position += Vector3.down * speed;
-        if(enemy.position.y <= -6) {
+        if(enemy.position.y <= destructLevel) {
+            UpdateLives._updateLives.decreaseLives();
             Destroy(gameObject);
         }
     }

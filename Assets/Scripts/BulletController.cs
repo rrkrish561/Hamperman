@@ -18,8 +18,6 @@ public class BulletController : MonoBehaviour
 
         if(bullet.position.y >= 10)
         {
-            //Test score remove once enemy is implemented
-            ++UpdateScore.gameScore;
             Destroy (gameObject);
         }
     }
@@ -28,7 +26,7 @@ public class BulletController : MonoBehaviour
         if(other.tag == "Enemy") {
             Destroy(other.gameObject);
             Destroy(gameObject);
-            ++UpdateScore.gameScore;
+            ++UpdateScore._updateScore.gameScore;
         }
     }
 }

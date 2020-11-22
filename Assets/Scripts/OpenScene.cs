@@ -10,7 +10,8 @@ public class OpenScene : MonoBehaviour
 
       void start()
       {
-        Debug.Log("made it start");
+          VolumeController._volumeController.hideVolumeSlider();
+          
           if (_Additive)
           {
           SceneManager.LoadScene(SceneToLoad, LoadSceneMode.Additive);
@@ -23,6 +24,8 @@ public class OpenScene : MonoBehaviour
 
       public void OpenAScene()
       {
+          VolumeController._volumeController.hideVolumeSlider();
+
           if (_Additive)
           {
           SceneManager.LoadScene(SceneToLoad, LoadSceneMode.Additive);
