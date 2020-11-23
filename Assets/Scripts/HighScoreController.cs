@@ -11,32 +11,32 @@ public class HighScore
 
 public class HighScoreController : MonoBehaviour
 {
-    private Transform entryContainer;
-    private Transform entryTemplate;
+    private Transform HSEntryContainer;
+    private Transform HSEntryTemplate;
     private float entryHeight = 14f;
     private HighScore[] HighScores = new HighScore[12]; 
 
      // Start is called before the first frame update
     void Awake()
     {
-        entryContainer = transform.Find("HighScoresEntries");
-        entryTemplate = entryContainer.Find("HighScoresTemplate");
-        entryTemplate.gameObject.SetActive(false);
+        HSEntryContainer = transform.Find("HighScoresEntries");
+        HSEntryTemplate = HSEntryContainer.Find("HighScoresTemplate");
+        HSEntryTemplate.gameObject.SetActive(false);
         GetHighScores();
         
         for (int i=0; i < HighScores.Length; i++)
         {  
-            Transform entryTransform = Instantiate(entryTemplate,entryContainer);
-            RectTransform entryRectTransform = entryTransform.GetComponent<RectTransform>();
-            entryRectTransform.anchoredPosition = new Vector2(0,-entryHeight * i);
-            entryTransform.gameObject.SetActive(true); 
+            Transform HSEntryTransform = Instantiate(HSEntryTemplate,HSEntryContainer);
+            RectTransform HSEntryRectTransform = HSEntryTransform.GetComponent<RectTransform>();
+            HSEntryRectTransform.anchoredPosition = new Vector2(0,-entryHeight * i);
+            HSEntryTransform.gameObject.SetActive(true); 
 
-            entryTransform.Find("PlayerName").GetComponent<Text>().text = HighScores[i].name; 
-            entryTransform.Find("Score").GetComponent<Text>().text = HighScores[i].score;
+            HSEntryTransform.Find("PlayerName").GetComponent<Text>().text = HighScores[i].name; 
+            HSEntryTransform.Find("Score").GetComponent<Text>().text = HighScores[i].score;
             if (HighScores[i].name  != "")
-                entryTransform.Find("HighScoresTemplateBackground").gameObject.SetActive(i % 2 == 0);
+                HSEntryTransform.Find("HighScoresTemplateBackground").gameObject.SetActive(i % 2 == 0);
             else
-                entryTransform.Find("HighScoresTemplateBackground").gameObject.SetActive(false);
+                HSEntryTransform.Find("HighScoresTemplateBackground").gameObject.SetActive(false);
         }
 
     }
