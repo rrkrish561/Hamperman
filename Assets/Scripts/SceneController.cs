@@ -9,6 +9,7 @@ public class SceneController : MonoBehaviour
     public float frequency;
     public float minSpawn;
     public float maxSpawn;
+    public float ySpawn;
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +26,6 @@ public class SceneController : MonoBehaviour
     private IEnumerator SpawnEnemy() 
     {
 
-        float ySpawn = 7.5f;
         float xSpawn;
 
         Vector3 spawnPosition;

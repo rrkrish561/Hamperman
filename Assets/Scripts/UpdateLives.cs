@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UpdateLives : MonoBehaviour
 {
 
 public static UpdateLives _updateLives;
+private string GameOverScene = "Scenes/GameOver";
+
 
 public GameObject[] Hearts;
 int currentLives;
@@ -36,7 +39,8 @@ public void decreaseLives()
 
   if (currentLives == 0)
     {
-      //toDo end game..
+      VolumeController._volumeController.hideVolumeSlider();
+      SceneManager.LoadScene(GameOverScene);
     }
 
 }
