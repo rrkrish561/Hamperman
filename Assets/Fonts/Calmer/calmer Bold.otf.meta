@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 25f6dad708a4745649c8e29291da0a16
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Calmer
+  fontNames:
+  - Calmer
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 03467f816cc394adda46c8c78eb162d9, type: 3}
+  - {fileID: 12800000, guid: 638dfb33aae004af6a7559382bd3973f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -5,17 +5,22 @@ using UnityEngine.UI;
 
 public class UpdateScore : MonoBehaviour
 {
-    public static int gameScore;
-    public Text UIGameScore;
+  public static UpdateScore _updateScore;
+  [HideInInspector]
+  public int gameScore;
+  [HideInInspector]
+  public string gameScoreName;
+  
 
-    void Start()
-    {
-        gameScore = 0;
-    }
+  void Start()
+  {
+    if (_updateScore !=null)
+      GameObject.Destroy(_updateScore);
+      else
+      _updateScore=this;
 
-    void Update()
-    {
-      UIGameScore.text = "" + gameScore;
-    }
+      DontDestroyOnLoad(this);
+    gameScore = 0;
+  }
 
 }

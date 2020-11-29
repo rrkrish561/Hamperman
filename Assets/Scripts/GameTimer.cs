@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour
 {
@@ -8,14 +9,12 @@ public class GameTimer : MonoBehaviour
     float gameTimeLeft;
     public Text UITimeLeft;
     bool RunTimer;
-    bool testLives;//For testing, remove later
-
+    private string GameOverScene = "Scenes/GameOver";
 
     void Start()
     {
         gameTimeLeft = gameTimeLimit*60;
         RunTimer = true;
-        testLives = true;//For testing, remove later
     }
 
 
@@ -28,31 +27,21 @@ public class GameTimer : MonoBehaviour
   }
 
 
-    void Update()
+  void Update()
+  {
+    if (RunTimer)
     {
-      if (RunTimer)
-      {
       gameTimeLeft -= Time.deltaTime;
       UITimeLeft.text = formatTime(gameTimeLeft).TrimStart(new char[] { '0' } );
 
-        if(gameTimeLeft <= 0)
-        {
-          RunTimer = false;
-          //todo save score, end game, go to score screen?
-        }
-
-        //test UpdateLives Remove when lives update is added
-        if ((gameTimeLeft % 40) > 1.0)
-          testLives = true;      
-
-        if (RunTimer && testLives && ((gameTimeLeft % 40) < 0.1))
-        {
-        UpdateLives._updateLives.decreaseLives();
-        testLives = false;
-        }
-
-
+      if(gameTimeLeft <= 0)
+      {
+        RunTimer = false;
+        VolumeController._volumeController.hideVolumeSlider();
+        SceneManager.LoadScene(GameOverScene);
       }
+
     }
+  }
 
 }
