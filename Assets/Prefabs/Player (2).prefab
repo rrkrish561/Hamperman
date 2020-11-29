@@ -10,13 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6560876952453752351}
   - component: {fileID: 4066573494690216996}
-  - component: {fileID: -7618285970198233980}
-  - component: {fileID: 8343159218323307879}
-  - component: {fileID: -1719312136435944350}
-  - component: {fileID: -2169611812910232395}
+  - component: {fileID: 2391462363086177693}
+  - component: {fileID: 2391462363086177690}
   m_Layer: 0
-  m_Name: dirtyShirt
-  m_TagString: Enemy
+  m_Name: Player (2)
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,8 +27,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3620610569366869742}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 8, z: 1}
+  m_LocalPosition: {x: -0.2, y: -5.36, z: 0}
+  m_LocalScale: {x: 9.570938, y: 9.799248, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -73,19 +71,19 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 79948be335c07774b82db21dc02c2bcc, type: 3}
+  m_SortingOrder: 3
+  m_Sprite: {fileID: 21300000, guid: ec07ba32d2a901b40b77c7848ba4ace8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.18, y: 0.23}
+  m_Size: {x: 0.16, y: 0.23}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &-7618285970198233980
+--- !u!95 &2391462363086177693
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -95,7 +93,7 @@ Animator:
   m_GameObject: {fileID: 3620610569366869742}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23b608634b2c32748ad271934ed34986, type: 2}
+  m_Controller: {fileID: 9100000, guid: ba30c91de2cdc0748abb12e31c562fa3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -104,7 +102,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8343159218323307879
+--- !u!114 &2391462363086177690
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -113,57 +111,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3620610569366869742}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d40881ee8fa5d644b82c074d9d04db17, type: 3}
+  m_Script: {fileID: 11500000, guid: a000ba78bfbe7427f8508dfd67cb7a0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.1
-  spriteRenderer: {fileID: 4066573494690216996}
-  newSprite: {fileID: 21300000, guid: 3bbf26a10ed2dc44f803dd8f5af26a81, type: 3}
-  animator: {fileID: -7618285970198233980}
---- !u!61 &-1719312136435944350
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3620610569366869742}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.16, y: 0.23}
-    newSize: {x: 0.18, y: 0.23}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.1480844}
-  m_EdgeRadius: 0
---- !u!50 &-2169611812910232395
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3620610569366869742}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  maxBound: 10.5
+  minBound: -10.5
+  shot: {fileID: 7597574287521216832, guid: 35677be31b0b9400b8d2a4a9bca2d569, type: 3}
+  shotSpawn: {fileID: 6560876952453752351}
+  fireRate: 0.5
+  animator: {fileID: 2391462363086177693}
