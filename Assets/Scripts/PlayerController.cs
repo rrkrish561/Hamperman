@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
 
     private Transform player;
-    public float speed;
+    private float speed = 0.14f;
     public float maxBound, minBound;
 
     public GameObject shot;
@@ -90,5 +90,16 @@ public class PlayerController : MonoBehaviour
         Vector3 scale = transform.localScale;
         scale.x *= -1;
         transform.localScale = scale;
+    }
+    public void PowerUp(string color)
+    {
+        Debug.Log("Power UP Called");
+        if (color == "white")
+        {
+            Debug.Log(speed);
+            Debug.Log("powerup: white");
+            speed = 0.2f;
+            Debug.Log(speed);
+        }
     }
 }
