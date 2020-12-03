@@ -9,11 +9,18 @@ public class EnemyController : MonoBehaviour
     public float speed;
     private float destructLevel;
 
+    public SpriteRenderer spriteRenderer;
+    public Sprite newSprite;
+    public Animator animator;
+
+    private bool dirty = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GetComponent<Transform>();  
-        destructLevel = GameObject.FindWithTag("Player").transform.position.y; 
+        enemy = GetComponent<Transform>();
+        //destructLevel = GameObject.FindWithTag("Player").transform.position.y; 
+        destructLevel = -10.5f;
     }
 
     // Update is called once per frame
@@ -21,8 +28,20 @@ public class EnemyController : MonoBehaviour
     {
         enemy.position += Vector3.down * speed;
         if(enemy.position.y <= destructLevel) {
-            UpdateLives._updateLives.decreaseLives();
+            if(dirty)
+                UpdateLives._updateLives.decreaseLives();
             Destroy(gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Bullet")
+        {
+            spriteRenderer.sprite = newSprite;
+            enemy.tag = "Untagged";
+            dirty = false;
+            animator.SetBool("IsShot", true);
         }
     }
 }

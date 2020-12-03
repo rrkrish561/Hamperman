@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5978306334512952689}
   - component: {fileID: 5978306334512952694}
   m_Layer: 0
-  m_Name: Falling_Object_1 (1)
+  m_Name: Hamper
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2ba6e45583bacea47bae1dfc0b385c55, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -120,3 +120,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.1
+  spriteRenderer: {fileID: 0}
+  newSprite: {fileID: 0}
+  animator: {fileID: 0}
