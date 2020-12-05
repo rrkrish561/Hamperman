@@ -7,15 +7,15 @@ public class PowerUp : MonoBehaviour
     public string color;
     private Transform powerUp;
 
-    public GameObject player;
-    private bool speedPowerup = false;
+    GameObject player;
+    private bool powerup = false;
     public float speed;
 
     // Start is called before the first frame update
     void Start()
     {
         powerUp = GetComponent<Transform>();
-      
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -32,21 +32,16 @@ public class PowerUp : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
-
-            if (color == "white")
-            {
-                speedPowerup = true;
-                Destroy(other.gameObject);
-                Destroy(gameObject);
-
-            }
+            powerup = true;
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
     void OnDestroy()
     {
-        if (speedPowerup)
+        if (powerup)
         {
-            player.GetComponent<PlayerController>().PowerUp("white");
+            player.GetComponent<PlayerController>().PowerUp(color);
         }
     }
 }

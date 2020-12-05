@@ -783,8 +783,8 @@ MonoBehaviour:
   - {fileID: 3620610569366869742, guid: 15feee75dd1f4bf49a01d3489819c855, type: 3}
   powerUps:
   - {fileID: 3620610569366869742, guid: 85923c25dc51b294bb68d08a46d56dba, type: 3}
-  - {fileID: 3620610569366869742, guid: 85923c25dc51b294bb68d08a46d56dba, type: 3}
-  - {fileID: 3620610569366869742, guid: 85923c25dc51b294bb68d08a46d56dba, type: 3}
+  - {fileID: 3620610569366869742, guid: 1aa11da4a99a16542ba628af27323b0e, type: 3}
+  - {fileID: 3620610569366869742, guid: 463719ae8a3a0ae4685dbce8b3020c28, type: 3}
   player: {fileID: 3620610569366869742, guid: db9e0b47040642e449e1dfd367a1efdb, type: 3}
 --- !u!82 &1149127368
 AudioSource:
@@ -1000,7 +1000,6 @@ MonoBehaviour:
   minBound: -10.5
   shot: {fileID: 7597574287521216832, guid: 35677be31b0b9400b8d2a4a9bca2d569, type: 3}
   shotSpawn: {fileID: 1450519444}
-  fireRate: 0.5
   animator: {fileID: 1450519442}
   right: 0
 --- !u!1 &1504619474
