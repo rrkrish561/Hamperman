@@ -22,7 +22,6 @@ public class DirtyHamper : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            Debug.Log("Dirty");
             animator.SetBool("isDirty", true);
         }
     }
