@@ -45,6 +45,14 @@ public void decreaseLives()
 
 }
 
+    public void increaseLives()
+    {
+        if (currentLives < 3)
+        {
+            Hearts[currentLives].SetActive(true);
+            ++currentLives;
+        }
+    }
 
 
 
