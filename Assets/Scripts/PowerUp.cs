@@ -22,7 +22,7 @@ public class PowerUp : MonoBehaviour
     void FixedUpdate()
     {
         powerUp.position += Vector3.down * speed;
-        if (powerUp.position.y <= -5.5)
+        if (powerUp.position.y <= -10.5)
         {
             Destroy(gameObject);
         }
