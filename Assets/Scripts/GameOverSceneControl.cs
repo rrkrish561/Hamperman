@@ -9,6 +9,7 @@ public class GameOverSceneControl : MonoBehaviour
     public Text UIGameScore;
     public InputField PlayerName;
     public GameObject SaveButton;
+    public string DBUrl;
 
 
     // Start is called before the first frame update
@@ -46,7 +47,7 @@ public class GameOverSceneControl : MonoBehaviour
         form.AddField("Name", name);
         form.AddField("Score", score);
 
-        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:5000/score/", form))
+        using (UnityWebRequest www = UnityWebRequest.Post(DBUrl, form))
         {
             yield return www.SendWebRequest();
 

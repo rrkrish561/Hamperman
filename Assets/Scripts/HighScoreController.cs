@@ -8,6 +8,8 @@ using UnityEngine.Networking;
 
 public class HighScoreController : MonoBehaviour
 {
+    public string TopScoresUrl;
+
     [Serializable]
     public class HighScore
     {  
@@ -32,7 +34,7 @@ public class HighScoreController : MonoBehaviour
     }
 
     IEnumerator GetHighScoresFromDB() {
-        UnityWebRequest www = UnityWebRequest.Get("http://localhost:5000/score/top/");
+        UnityWebRequest www = UnityWebRequest.Get(TopScoresUrl);
         yield return www.SendWebRequest();
  
         if(www.isNetworkError || www.isHttpError) {
