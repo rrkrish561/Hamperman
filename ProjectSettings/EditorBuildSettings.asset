@@ -11,9 +11,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainUI.unity
     guid: ff2e06b5c62524052abd0a37b7c5607a
-  - enabled: 1
-    path: Assets/Scenes/HighScoresxx.unity
-    guid: f253ea8c83da84904b2c3713b4d5e132
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: de262b7d483454bf9a686ef1904be761
