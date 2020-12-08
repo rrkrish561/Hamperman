@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Networking;
 
 public class GameOverSceneControl : MonoBehaviour
 {
@@ -26,14 +27,38 @@ public class GameOverSceneControl : MonoBehaviour
     public void SaveScore()
     {
         //ToDo save to database..
-        Debug.Log("saved - " + PlayerName.text + "score = " + UpdateScore._updateScore.gameScore);
+        string playerName = PlayerName.text;
+        Debug.Log("saved - " + playerName + " score = " + UpdateScore._updateScore.gameScore);
 
         UpdateScore._updateScore.gameScoreName = PlayerName.text;
         PlayerName.readOnly = true;
         PlayerName.textComponent.alignment = TextAnchor.MiddleCenter;
-        PlayerName.text = PlayerName.text + ": Score = " + UpdateScore._updateScore.gameScore;
+        PlayerName.text = "Score Saved!";
         PlayerName.image.enabled = false;
         SaveButton.SetActive(false);
 
+       StartCoroutine(SaveToDB(playerName, UpdateScore._updateScore.gameScore));
     }
+
+    IEnumerator SaveToDB(string name, int score)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("Name", name);
+        form.AddField("Score", score);
+
+        using (UnityWebRequest www = UnityWebRequest.Post("http://localhost:5000/score/", form))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                Debug.Log("Form upload complete!");
+            }
+        }
+    }
+
 }
