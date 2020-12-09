@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     private float speed = 0.14f;
     public float maxBound, minBound;
 
-    public GameObject shot;
+    public GameObject[] shot = new GameObject[2];
     public Transform shotSpawn;
     private float fireRate = 0.5f;
 
@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private float powerUpTime = 15f;
     private bool speedActive = false;
     private bool sprayActive = false;
+    public int shotNum = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -59,7 +60,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey("space") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            Instantiate(shot[shotNum], shotSpawn.position, shotSpawn.rotation);
         }
 
         //animation

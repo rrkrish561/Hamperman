@@ -1298,6 +1298,7 @@ GameObject:
   - component: {fileID: 1450519443}
   - component: {fileID: 1450519442}
   - component: {fileID: 1450519445}
+  - component: {fileID: 1450519446}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1402,10 +1403,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxBound: 10.5
   minBound: -10.5
-  shot: {fileID: 7597574287521216832, guid: 35677be31b0b9400b8d2a4a9bca2d569, type: 3}
+  shot:
+  - {fileID: 7597574287521216832, guid: 35677be31b0b9400b8d2a4a9bca2d569, type: 3}
+  - {fileID: 7597574287521216832, guid: 2c024013467bfbe4980a77b0329c72a3, type: 3}
   shotSpawn: {fileID: 1450519444}
   animator: {fileID: 1450519442}
   right: 0
+  shotNum: 0
+--- !u!114 &1450519446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450519441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c243c58a7e1ad4bbca302ed98cd7d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504619474
 GameObject:
   m_ObjectHideFlags: 0
