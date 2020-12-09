@@ -48,8 +48,7 @@ public class SceneController : MonoBehaviour
             Instantiate(fallingObjects[num], spawnPosition, Quaternion.identity);
 
             //spawn PowerUp
-            //int rand = UnityEngine.Random.Range(0, 10);
-            int rand = 5;
+            int rand = UnityEngine.Random.Range(0, 10);
             if (rand == 5)
             {
 
