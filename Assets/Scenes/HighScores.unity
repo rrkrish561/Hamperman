@@ -981,7 +981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f065362670b34b298d5fa8249eb3295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TopScoresUrl: http://localhost:5000/score/top/
+  TopScoresUrl: https://hamperman-backend-server.herokuapp.com/score/top/
 --- !u!1 &959772792
 GameObject:
   m_ObjectHideFlags: 0
