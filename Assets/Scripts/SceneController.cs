@@ -31,7 +31,7 @@ public class SceneController : MonoBehaviour
     private IEnumerator SpawnEnemy() 
     {
 
-        float xSpawn;
+        float xSpawn, xSpawnPowerups;
 
         Vector3 spawnPosition;
 
@@ -48,12 +48,17 @@ public class SceneController : MonoBehaviour
             Instantiate(fallingObjects[num], spawnPosition, Quaternion.identity);
 
             //spawn PowerUp
-            int rand = UnityEngine.Random.Range(0, 10);
+            //int rand = UnityEngine.Random.Range(0, 10);
+            int rand = 5;
             if (rand == 5)
             {
-                xSpawn = UnityEngine.Random.Range(minSpawn, maxSpawn);
 
-                spawnPosition = new Vector3(xSpawn, ySpawn, 0);
+                xSpawnPowerups = UnityEngine.Random.Range(minSpawn, maxSpawn);
+                while (xSpawnPowerups <= xSpawn + 2 && xSpawnPowerups >= xSpawn - 2) {
+                    xSpawnPowerups = UnityEngine.Random.Range(minSpawn, maxSpawn);
+                }
+
+                    spawnPosition = new Vector3(xSpawnPowerups, ySpawn, 0);
 
                 num = UnityEngine.Random.Range(0, 3);
                 Instantiate(powerUps[num], spawnPosition, Quaternion.identity);
