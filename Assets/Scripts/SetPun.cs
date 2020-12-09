@@ -11,7 +11,7 @@ public class SetPun : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
         string[] puns = dataFile.text.Split('\n');
 
         int index = Random.Range(0, puns.Length);
