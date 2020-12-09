@@ -40,6 +40,10 @@ public class EnemyController : MonoBehaviour
         {
             spriteRenderer.sprite = newSprite;
             enemy.tag = "Untagged";
+
+            if (dirty == true)
+                FindObjectOfType<AudioController>().Play("HitSound");
+
             dirty = false;
             animator.SetBool("IsShot", true);
         }

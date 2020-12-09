@@ -32,9 +32,12 @@ public class PowerUp : MonoBehaviour
     {
         if (other.tag == "Bullet")
         {
+            FindObjectOfType<AudioController>().Play("PowerUp");
             powerup = true;
             Destroy(other.gameObject);
             Destroy(gameObject);
+          
+
         }
     }
     void OnDestroy()

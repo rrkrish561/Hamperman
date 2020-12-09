@@ -35,9 +35,11 @@ public void decreaseLives()
   {
     Hearts[currentLives-1].SetActive(false);
     --currentLives;
+    FindObjectOfType<AudioController>().Play("LoseLifeSound");
+
   }
 
-  if (currentLives == 0)
+        if (currentLives == 0)
     {
       VolumeController._volumeController.hideVolumeSlider();
       SceneManager.LoadScene(GameOverScene);
