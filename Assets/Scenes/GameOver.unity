@@ -1454,7 +1454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44713cb0fd6abc74cb10a205068e326e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  descriptionParam: Woooo
+  descriptionParam: Go check Laundr out at https://www.laundr.io!
 --- !u!114 &1844662082
 MonoBehaviour:
   m_ObjectHideFlags: 0

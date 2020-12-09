@@ -12,6 +12,7 @@ public class ShareToTwitter : MonoBehaviour
     public string descriptionParam;
 
     public void ShareToTw() {
-        Application.OpenURL(TWITTER_ADDRESS + "?text=" + WWW.EscapeURL(descriptionParam));
+        int gameScore = UpdateScore._updateScore.gameScore;
+        Application.OpenURL(TWITTER_ADDRESS + "?text=" + WWW.EscapeURL("I just scored " + gameScore + " points in Laundr's Hamperman game!" + " " + descriptionParam));
     }
 }
