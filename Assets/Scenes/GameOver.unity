@@ -1025,7 +1025,7 @@ MonoBehaviour:
   UIGameScore: {fileID: 2039866898}
   PlayerName: {fileID: 1982162478}
   SaveButton: {fileID: 1970902535}
-  DBUrl: ' http://5ea951ba4894.ngrok.io /score/'
+  DBUrl: http://d3b5e1827961.ngrok.io/score/
 --- !u!1 &922281919
 GameObject:
   m_ObjectHideFlags: 0

@@ -34,6 +34,7 @@ public class HighScoreController : MonoBehaviour
     }
 
     IEnumerator GetHighScoresFromDB() {
+        Debug.Log(TopScoresUrl);
         UnityWebRequest www = UnityWebRequest.Get(TopScoresUrl);
         yield return www.SendWebRequest();
  
