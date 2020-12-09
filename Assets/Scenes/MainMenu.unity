@@ -239,7 +239,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: LoseLifeSound
     clip: {fileID: 8300000, guid: ac95c4d36e1998548919add9d48d5960, type: 3}
-    volume: 0
+    volume: 0.405
     source: {fileID: 0}
 --- !u!4 &328915132
 Transform:
@@ -560,7 +560,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5fa04974d94f88e47bb1fc353defe2b3, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.51
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 1
   Mute: 0

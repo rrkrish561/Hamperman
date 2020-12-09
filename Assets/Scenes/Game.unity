@@ -806,15 +806,15 @@ MonoBehaviour:
   sounds:
   - name: PowerUp
     clip: {fileID: 8300000, guid: daa97faef3a784e4a9c2e21dcfc7e1a5, type: 3}
-    volume: 0.443
+    volume: 0.1
     source: {fileID: 0}
   - name: HitSound
     clip: {fileID: 8300000, guid: 81410155eab565f439b053c819aa01e0, type: 3}
-    volume: 0.487
+    volume: 0.1
     source: {fileID: 0}
   - name: LoseLifeSound
     clip: {fileID: 8300000, guid: ac95c4d36e1998548919add9d48d5960, type: 3}
-    volume: 0.455
+    volume: 0.1
     source: {fileID: 0}
 --- !u!4 &847698512
 Transform:
@@ -1093,7 +1093,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dfcb5f7f80c75ab4d9aa3d16fff5e09a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.42
+  m_Volume: 0.1
   m_Pitch: 1
   Loop: 1
   Mute: 0
