@@ -32,9 +32,12 @@ public void decreaseLives()
   {
     Hearts[currentLives-1].SetActive(false);
     --currentLives;
+
+    //Audio
+    FindObjectOfType<AudioManager>().Play("LoseLifeSound");
   }
 
-  if (currentLives == 0)
+        if (currentLives == 0)
     {
       //toDo end game..
     }
