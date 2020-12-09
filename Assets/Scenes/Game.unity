@@ -774,6 +774,62 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 830584381}
+--- !u!1 &847698510
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847698512}
+  - component: {fileID: 847698511}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &847698511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847698510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001ad8d7b8fb315459bc3160d6e9fdb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: PowerUp
+    clip: {fileID: 8300000, guid: daa97faef3a784e4a9c2e21dcfc7e1a5, type: 3}
+    volume: 0.443
+    source: {fileID: 0}
+  - name: HitSound
+    clip: {fileID: 8300000, guid: 81410155eab565f439b053c819aa01e0, type: 3}
+    volume: 0.487
+    source: {fileID: 0}
+  - name: LoseLifeSound
+    clip: {fileID: 8300000, guid: ac95c4d36e1998548919add9d48d5960, type: 3}
+    volume: 0.455
+    source: {fileID: 0}
+--- !u!4 &847698512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847698510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1078439883
 GameObject:
   m_ObjectHideFlags: 0
@@ -1035,9 +1091,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5fa04974d94f88e47bb1fc353defe2b3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dfcb5f7f80c75ab4d9aa3d16fff5e09a, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.365
+  m_Volume: 0.42
   m_Pitch: 1
   Loop: 1
   Mute: 0
