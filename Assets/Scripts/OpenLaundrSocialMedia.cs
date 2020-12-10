@@ -8,6 +8,6 @@ public class OpenLaundrSocialMedia : MonoBehaviour
 
     public void Open()
     {
-        Application.OpenURL(Url);
+        Application.ExternalEval(Url);
     }
 }
